@@ -1,0 +1,214 @@
+*{
+  margin : 0 ;
+  padding: 0 ;
+}
+body
+{
+  margin : 0px ;
+  padding: 0px ; 
+overflow : auto ;
+   width: 100% ; 
+}
+.navbar
+{
+    border-radius: 0 ;
+}
+body#faq
+{
+     font-family: 'Tahoma',sans-serif ; 
+     color : #000;
+     font-size : 16px ;
+     background: #f9f9f9 ; 
+     line-height: 1.6em ;
+
+}
+body#login {
+  
+  background-color: #2C3E49;
+  color:#fff ; 
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+ul,li{
+  list-style: none ; 
+}
+
+#container 
+{
+  width: 60% ; 
+  margin : 30px auto ;
+  overflow : auto ;
+}
+
+
+ h1
+ {
+  text-align : center;
+  margin-bottom : 20px;
+ }
+
+ .title 
+ {
+  height : 60px ;
+  background: #6bb170 ; 
+  color: #fff ; 
+  text-align: center ; 
+  padding-top:1px ; 
+}
+
+ #faq li
+ {
+  padding: 20px ; 
+ 
+ }
+
+ #faq li.q
+ {
+  background: #eee ; 
+  font-weight: bold ; 
+  font-size: 100% ; 
+  border-bottom :  1px #ddd solid ;
+  cursor : pointer ;
+   
+ }
+
+
+
+ #faq li.a
+ {
+  background: #ddd ; 
+  display: none ; 
+  font-size: 80% ; 
+  
+   }
+
+   @media (max width : 800px )
+   {
+    #container {
+         
+        width : 90%;
+
+    }
+   }
+     .rotate 
+     {
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+       transform:rotate(90deg); 
+     }
+     #back
+     {
+       width : 100px ;
+       height : 50px ;
+       margin-right: 50px ; 
+       background: #333 ; 
+     }
+      
+      #back:hover
+      {
+        background: #000 ; 
+
+      } 
+
+      #nextTab
+       {
+        background : #18BC9C ; 
+        width : 70px ; 
+        height : 45px ; 
+        border : 0px
+        
+       }
+
+     #nextTab:hover
+       {
+        background : #128F76  ; 
+        
+       }
+       #backTab
+       {
+         background : #2C2E50 ; 
+        width : 70px ; 
+        height : 45px ; 
+        border: 0px
+       }
+     
+       #backTab:hover
+       {
+         background: #2F3E50 ; 
+       }
+       .demo-errors
+       {
+         color :red !important; 
+         font-size : 10px ;
+       }
+       #output
+       {
+         height : 220px ;
+         width : 200px ;
+         
+         display : block ;
+        
+       }
+        #sign
+       {
+
+         height : 220px ;
+         width : 200px ;
+         display : block ;
+       
+       }
+
+       #Draft
+       {
+        height : 200px;
+        width : 200px ;
+        display  : block ;
+       } 
+       .footer
+       {
+         color : white;
+        text-align: center ;
+        background : #2C2E50 ;
+        height : 80px;
+        width : 100%;
+        margin-top: 200px ;
+       }
+       #footer_text
+       {
+        padding: 25px ; 
+       }
+       
