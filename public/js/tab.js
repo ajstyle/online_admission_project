@@ -4,8 +4,8 @@
 /***********************************************************************************************/
 var expEmail = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/,
   expLettersOnly = /^[a-zA-Z ]+$/,
-  expLettersNumbers = /^[a-zA-Z0-9]*$/;
-
+  expLettersNumbers = /^[a-zA-Z0-9]*$/,
+  expNumbers = /^[0-9]*$/;
     
 
 /***********************************************************************************************/
@@ -31,9 +31,14 @@ $( "#form-new-account" ).on( "keyup", "input.validate-locally", function() {
 /***********************************************************************************************/
 function validateLength( fieldValue, minLength ) {
   // We remove trailing and leading whitespace
-  return ( $.trim( fieldValue ).length > minLength );
+  return ( $.trim( fieldValue ).length > minLength  );
 }
 
+function MobvalidateLength( fieldValue, maxLength) {
+  // We remove trailing and leading whitespace
+ console.log($.trim( fieldValue ).length);
+  return ( ( maxLength) > $.trim( fieldValue ).length  );
+}
 
 function validateSelect(field)
 {
@@ -116,9 +121,9 @@ switch ( field.attr( "name" ) ) {
   
 
        case "FirstName": 
-      if ( !validateLength( value, 0 ) ) {
+      if ( !validateLength( value, 3 ) ) {
         error = true;
-        errorText += "Please enter First Name ! <br />";
+        errorText += "First Name too short ! <br />";
         
       }
       
@@ -130,9 +135,9 @@ switch ( field.attr( "name" ) ) {
     
  
        case "LastName": 
-      if ( !validateLength( value, 0 ) ) {
+      if ( !validateLength( value, 3 ) ) {
         error = true;
-        errorText += "Please enter Last Name ! <br />";
+        errorText += " Last Name too short ! <br />";
         
       }
       
@@ -148,9 +153,9 @@ switch ( field.attr( "name" ) ) {
 
 
     case "FName": 
-      if ( !validateLength( value, 0 ) ) {
+      if ( !validateLength( value, 3 ) ) {
         error = true;
-        errorText += "Please enter Father Name ! <br />";
+        errorText += " Father Name too short ! <br />";
       }
       
       if ( !expLettersOnly.test( value ) ) {
@@ -165,9 +170,9 @@ switch ( field.attr( "name" ) ) {
       break;
 
     case "MName": 
-      if ( !validateLength( value, 0 ) ) {
+      if ( !validateLength( value, 3 ) ) {
         error = true;
-        errorText += "The name is too short!<br />";
+        errorText += " Mother name is too short!<br />";
       }
       
       if ( !expLettersOnly.test( value ) ) {
@@ -242,11 +247,25 @@ switch ( field.attr( "name" ) ) {
     
     case "Mobile_no": 
     
-     if ( !validateLength( value, 0 ) ) {
+        if ( !expNumbers.test( value ) ) {
         error = true;
-        errorText += "Enter Mobile Number !<br />";
+        errorText += "Mobile no. Contain only Numbers ";
+      }
+
+if ( !validateLength( value,  9 ) ) {
+        error = true;
+        errorText += "Mobile Number lenght should be 10   !<br />";
    
       }
+
+if ( !MobvalidateLength( value,  11  ) ) {
+        error = true;
+        errorText += "Mobile Number lenght should be 10   !<br />";
+   
+      }
+
+
+
       break;
 
       case "Address": 
@@ -315,6 +334,11 @@ switch ( field.attr( "name" ) ) {
                      errorText += "Enter amount !<br />";
    
                    }
+                    if ( !expNumbers.test( value ) ) {
+        error = true;
+        errorText += "Amount only contain number!";
+      }
+     
 
        break ; 
 
@@ -327,6 +351,13 @@ switch ( field.attr( "name" ) ) {
                      errorText += "Enter Draft_no. !<br />";
    
                    }
+
+       if ( !expNumbers.test( value ) ) {
+        error = true;
+        errorText += "Draft no only contain number!";
+      }
+
+
 
        break ; 
         

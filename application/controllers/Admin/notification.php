@@ -17,15 +17,15 @@ class notification extends CI_Controller
  
 
 	public function index()
-	{
+	{/*
        $Email_id = $this->input->post('Email_id');
     echo $Email_id ; 
       $config['protocol']    = 'smtp';
         $config['smtp_host']    = 'ssl://smtp.gmail.com';
         $config['smtp_port']    = '465';
         $config['smtp_timeout'] = '7';
-        $config['smtp_user']    = 'masterofcomputer2014@gmail.com';
-        $config['smtp_pass']    = 'mlsu2014';
+        $config['smtp_user']    = 'nitinjain.lov@gmail.com';
+        $config['smtp_pass']    = 'nitinjain1';
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'text'; // or html
@@ -45,6 +45,34 @@ class notification extends CI_Controller
         echo $this->email->print_debugger();
         
 redirect("admin/dashboard");
+
+.*/
+ $config = Array(
+  'protocol' => 'smtp',
+  'smtp_host' => 'ssl://smtp.gmai.com',
+  'smtp_port' => 465,
+  'smtp_user' => 'amitjain.lov@gmail.com', // change it to yours
+  'smtp_pass' => 'amit1992', // change it to yours
+  'mailtype' => 'text',
+  'charset' => 'iso-8859-1',
+  'wordwrap' => TRUE
+);
+
+        $message = '';
+        $this->load->library('email', $config);
+      $this->email->set_newline("\r\n");
+      $this->email->from('amitjain.lov@gmail.com'); // change it to yours
+      $this->email->to('nitinjain.lov@gmail.com');// change it to yours
+      $this->email->subject('Resume from JobsBuddy for your Job posting');
+      $this->email->message($message);
+      $this->email->send();
+     
+      echo "Email sent.";
+       echo $this->email->print_debugger();
+     
+     
+
+
 }
 }
 ?>

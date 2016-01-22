@@ -90,11 +90,11 @@ else
   <!-- Nav tabs -->
     
 <ul class="nav nav-tabs">
-                        <li><a href="#home" class="btn btn-large btn-block disabled " data-toggle="tab" >Basic Detail</a></li>
-                        <li><a href="#profile" data-toggle="tab" class = "btn btn-large btn-block btn-success disabled ">Academic detail</a></li>
-                        <li><a href="#messages" data-toggle="tab" class = "btn btn-large btn-block btn-success disabled">Upload document</a></li>
-                        <li><a href="#Bank" data-toggle="tab" class = "btn btn-large btn-block btn-success disabled  ">Bank Detail</a></li>
-                        <li><a href="#settings" data-toggle="tab" class = "btn btn-large btn-block btn-success disabled ">Contact Detail</a></li>
+                        <li><a href="#home" class="btn btn-large btn-block btn-success   " data-toggle="tab" >Basic Detail</a></li>
+                        <li><a href="#profile" data-toggle="tab" class = "btn btn-large btn-block btn-success   ">Academic detail</a></li>
+                        <li><a href="#messages" data-toggle="tab" class = "btn btn-large btn-block btn-success  ">Upload document</a></li>
+                        <li><a href="#Bank" data-toggle="tab" class = "btn btn-large btn-block btn-success   ">Bank Detail</a></li>
+                        <li><a href="#settings" data-toggle="tab" class = "btn btn-large btn-block btn-success  disable  ">Contact Detail</a></li>
             </ul>   
   <!-- Tab panes -->
   
@@ -145,7 +145,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
   <tr>
    
-    <td><strong>Name*</strong></td>
+    <td>  <div class="required"><strong>Name</strong></label></div></td>
     <td>
       
       <input type="text" name="FirstName"  id = "FirstName" class = "form-control" placeholder = "First Name" />
@@ -197,7 +197,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
   <tr>
    
-    <td><strong>Father Name</strong></td>
+    <td> <div class="required"><strong>Father Name</strong></div></td>
     <td><label for="name"> </label>
       
       <input type="text" name="FName"  id = "fname" class = "form-control" />
@@ -218,7 +218,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
   <p>
   <tr>
-    <td><strong>Mother Name:</strong></td>
+    <td><div class="required"><strong>Mother Name:</strong></td>
     <td><label for="name7"></label>
       <input type="text" name="MName" id="mname"  class = "form-control">
       <span class="demo-errors"></span>
@@ -236,7 +236,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 <p>
 
   <tr>
-    <td><strong>Date of Birth:</strong></td>
+    <td><div class="required"><strong>Date of Birth:</strong></td>
      <td>
 
         
@@ -259,7 +259,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 </p>  
 <p>
 <tr>
-    <td><strong>Gender</strong></td>
+    <td><div class="required"><strong>Gender</strong></td>
    <td> <div class="radio">
   <label><input type="radio"  name = "Gender" id = "Gender" value = "Male" checked>
     Male
@@ -279,7 +279,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 <p>
 
 <tr>
-  <td><strong>Select Course</strong></td>
+  <td><div class="required"><strong>Select Course</strong></td>
 <td><div class="form-group">
   
   <select class="form-control" id="Course" name = "Course">
@@ -305,7 +305,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 <p>
 
 <tr>
-  <td><strong>Select Semester</strong></td>
+  <td><div class="required"><strong>Select Semester</strong></td>
 <td><div class="form-group">
   
   <select class="form-control" id="Semester" name = "Semester">
@@ -339,7 +339,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
 <p>
 <tr>
-  <td><strong>Category</strong></td>
+  <td><div class="required"><strong>Category</strong></td>
 <td><div class="form-group">
   
   <select class="form-control" id="Cast_Category" name = "Cast_Category">
@@ -365,7 +365,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
 <p>
 <tr>
-  <td><strong>Religion</strong></td>
+  <td><div class="required"><strong>Religion</strong></td>
 <td><div class="form-group">
   
   <select class="form-control" id="Religion"  name = "Religion">
@@ -400,7 +400,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
 
   <tr>
-    <td><strong>Student_Category</strong></td>
+    <td><div class="required"><strong>Student_Category</strong></td>
     <td><div class="form-group">
       <select class="form-control" id="Stu_Category" name = "Stu_Category">
         <option value = "-1" >Select Category</option>
@@ -421,7 +421,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 </p>
 <p>
     <tr>
-    <td><strong>Email id :</strong></td>
+    <td><div class="required"><strong>Email id :</strong></td>
     <td><input type="text" id="Email_id" name = "Email_id" class = "form-control">
     <span class="demo-errors"></span>
     </td>
@@ -437,7 +437,7 @@ echo form_open_multipart('student/success',$attributes) ;?>
 
 <p>
   <tr>
-    <td><strong>Mobile no.</strong></td>
+    <td><div class="required"><strong>Mobile no.</strong></td>
     <td><input type="text" name="Mobile_no" id="Mobile_no" class = "form-control" >
 <span class="demo-errors"></span>
     </td>
@@ -491,13 +491,13 @@ echo form_open_multipart('student/success',$attributes) ;?>
 <table class = "table-bordered">
  
 <tr>
-<td align="center"><b>Examination</b></td>
-<td align="center"><b>Board</b></td>
-<td align="center"><b>Rollno</b></td>
-<td align="center"><b>Pass year</b></td>
-<td align="center"><b>Obtain Marks</b></td>
-<td align="center"><b>Total Marks</b></td>
-<td align="center"><b>Percent</b></td>
+<td align="center"><div class="required"><b>Examination</b></td>
+<td align="center"><div class="required"><b>Board</b></td>
+<td align="center"><div class="required"><b>Rollno</b></td>
+<td align="center"><div class="required"><b>Pass year</b></td>
+<td align="center"><div class="required"><b>Obtain Marks</b></td>
+<td align="center"><div class="required"><b>Total Marks</b></td>
+<td align="center"><div class="required"><b>Percent</b></td>
 </tr>
  
 
@@ -586,7 +586,11 @@ echo form_open_multipart('student/success',$attributes) ;?>
     </tr>
 <tr>
 <td>
-Picture* :  
+<div class="required">
+<strong>
+Picture
+</strong> 
+</div>
 </td>
 <td>
 <input type="file" name ="userfile" size="20" id = "Image" accept="image/*" onchange= "loadFile(event)"  />
@@ -600,8 +604,13 @@ Picture* :
 
 
 <tr>
+
 <td>
-Signature* : 
+<div class="required">
+<strong>
+Signature 
+</strong>
+</div>
 </td>
 <td>
 <INPUT type="file" name="Sign_file" id = "Sign_file" accept="image/*" onchange="SignFile(event)" /> 
@@ -614,7 +623,11 @@ Signature* :
 
 <tr>
 <td>
-Demand Draft * : 
+<div class="required">
+<strong>
+Demand Draft 
+</strong>
+</div>
 </td>
 <td>
 <INPUT type="file" name="Draft_file" id = "Draft_file" accept="image/*" onchange="DraftFile(event)" /> 
@@ -671,59 +684,62 @@ Demand Draft * :
 
  
 <tr>
-  <td><strong>Select Bank</strong></td>
+
+  <td><div class="required"><strong>Select Bank</strong></td></div>
 <td><div class="form-group">
   
   <select class="form-control" id="Bank1" name="Bank1">
     <option value = "-1" >Select Bank</option>
- 
-        <option value = "Allahabad Bank">Allahabad Bank</option>
-        <option value = "Andhra Bank">Andhra Bank</option>
-        <option value = "Axis Bank">Axis Bank</option>
-        <option value = "Bank of Bahrain and Kuwait">Bank of Bahrain and Kuwait</option>
-        <option value = "Bank of Baroda - Corporate Banking">Bank of Baroda - Corporate Banking</option>
-        <option value = "Bank of Baroda - Retail Banking">Bank of Baroda - Retail Banking</option>
-        <option value = "Bank of India">Bank of India</option>
-        <option value = "Bank of Maharashtra">Bank of Maharashtra</option>
-        <option value = "Canara Bank">Canara Bank</option>
-        <option value = "Central Bank of India">Central Bank of India</option>
-        <option value = "City Union Bank">City Union Bank</option>
-        <option value = "Corporation Bank">Corporation Bank</option>
-        <option value = "Deutsche Bank">Deutsche Bank</option>
-        <option value = "Development Credit Bank">Development Credit Bank</option>
-        <option value = "Dhanlaxmi Bank">Dhanlaxmi Bank</option>
-        <option value = "Federal Bank">Federal Bank</option>
-        <option value = "ICICI Bank">ICICI Bank</option>
-        <option value = "IDBI Bank">IDBI Bank</option>
-        <option value = "Indian Bank">Indian Bank</option>
-        <option value = "Indian Overseas Bank">Indian Overseas Bank</option>
-        <option value = "IndusInd Bank">IndusInd Bank</option>
-        <option value = "ING Vysya Bank">ING Vysya Bank</option>
-        <option value = "Jammu and Kashmir Bank">Jammu and Kashmir Bank</option>
-        <option value = "Karnataka Bank Ltd">Karnataka Bank Ltd</option>
-        <option value = "Karur Vysya Bank">Karur Vysya Bank</option>
-        <option value = "Kotak Bank">Kotak Bank</option>
-        <option value = "Laxmi Vilas Bank">Laxmi Vilas Bank</option>
-        <option value = "Oriental Bank of Commerce">Oriental Bank of Commerce</option>
-        <option value = "Punjab National Bank - Corporate Banking">Punjab National Bank - Corporate Banking</option>
-        <option value = "Punjab National Bank - Retail Banking">Punjab National Bank - Retail Banking</option>
-        <option value = "Punjab & Sind Bank">Punjab & Sind Bank</option>
-        <option value = "Shamrao Vitthal Co-operative Bank">Shamrao Vitthal Co-operative Bank</option>
-        <option value = "South Indian Bank">South Indian Bank</option>
-        <option value = "State Bank of Bikaner & Jaipur">State Bank of Bikaner & Jaipur</option>
-        <option value = "State Bank of Hyderabad">State Bank of Hyderabad</option>
-        <option value = "State Bank of India">State Bank of India</option>
-        <option value = "State Bank of Mysore">State Bank of Mysore</option>
-        <option value = "State Bank of Patiala">State Bank of Patiala</option>
-        <option value = "State Bank of Travancore">State Bank of Travancore</option>
-        <option value = "Syndicate Bank">Syndicate Bank</option>
-        <option value = "Tamilnad Mercantile Bank Ltd.">Tamilnad Mercantile Bank Ltd.</option>
-        <option value = "UCO Bank">UCO Bank</option>
-        <option value = "Union Bank of India">Union Bank of India</option>
-        <option value = "United Bank of India">United Bank of India</option>
-        <option value = "Vijaya Bank">Vijaya Bank</option>
-        <option value = "Yes Bank Ltd">Yes Bank Ltd</option>
-         </select>
+   
+<option value = "0">Allahabad Bank</option>
+<option value = "0">Andhra Bank</option>
+<option value = "0">Axis Bank</option>
+<option value = "0">Bank of Bahrain and Kuwait</option>
+<option value = "0">Bank of Baroda - Corporate Banking</option>
+<option value = "0">Bank of Baroda - Retail Banking</option>
+<option value = "0">Bank of India</option>
+<option value = "0">Bank of Maharashtra</option>
+<option value = "0">Canara Bank</option>
+<option value = "0">Central Bank of India</option>
+<option value = "0">City Union Bank</option>
+<option value = "0">Corporation Bank</option>
+<option value = "0">Deutsche Bank</option>
+<option value = "0">Development Credit Bank</option>
+<option value = "0">Dhanlaxmi Bank</option>
+<option value = "0">Federal Bank</option>
+<option value = "0">HDFC Bank</option>
+<option value = "0">ICICI Bank</option>
+<option value = "0">IDBI Bank</option>
+<option value = "0">Indian Bank</option>
+<option value = "0">Indian Overseas Bank</option>
+<option value = "0">IndusInd Bank</option>
+<option value = "0">ING Vysya Bank</option>
+<option value = "0">Jammu and Kashmir Bank</option>
+<option value = "0">Karnataka Bank Ltd</option>
+<option value = "0">Karur Vysya Bank</option>
+<option value = "0">Kotak Bank</option>
+<option value = "0">Laxmi Vilas Bank</option>
+<option value = "0">Oriental Bank of Commerce</option>
+<option value = "0">Punjab National Bank - Corporate Banking</option>
+<option value = "0">Punjab National Bank - Retail Banking</option>
+<option value = "0">Punjab & Sind Bank</option>
+<option value = "0">Shamrao Vitthal Co-operative Bank</option>
+<option value = "0">South Indian Bank</option>
+<option value = "0">State Bank of Bikaner & Jaipur</option>
+<option value = "0">State Bank of Hyderabad</option>
+<option value = "0">State Bank of India</option>
+<option value = "0">State Bank of Mysore</option>
+<option value = "0">State Bank of Patiala</option>
+<option value = "0">State Bank of Travancore</option>
+<option value = "0">Syndicate Bank</option>
+<option value = "0">Tamilnad Mercantile Bank Ltd.</option>
+<option value = "0">UCO Bank</option>
+<option value = "0">Union Bank of India</option>
+<option value = "0">United Bank of India</option>
+<option value = "0">Vijaya Bank</option>
+<option value = "0">Yes Bank Ltd</option>
+
+    </select>
   <span class="demo-errors"></span>
   </div>
 </td>
@@ -741,7 +757,8 @@ Demand Draft * :
 
   <p>
   <tr>
-    <td><strong>Amount</strong></td>
+
+    <td><div class="required"><strong>Amount</strong></td></div>
     <td><label for="name7"></label>
       <input type="text" name="amount" id="amount"  class = "form-control">
       <span class="demo-errors"></span>
@@ -757,7 +774,7 @@ Demand Draft * :
 </p>
 <p>
 <tr>
-    <td><strong>Draft_no</strong></td>
+<td>    <div class="required"><strong>Draft_no</strong></td></div>
     <td><label for="name7"></label>
       <input type="text" name="Draft_no" id="Draft_no"  class = "form-control">
       <span class="demo-errors"></span>
@@ -773,7 +790,7 @@ Demand Draft * :
 </p>
 <p>
 <tr>
-    <td><strong>Draft date</strong></td>
+    <td><div class="required"><strong>Draft date</strong></td></div>
      <td>
 
         
@@ -794,7 +811,7 @@ Demand Draft * :
 
 <p>
 <tr>
-    <td><strong>Payable at</strong></td>
+    <td><div class="required"><strong>Payable at</strong></td></div>
     <td><label for="name7"></label>
       <input type="text" name="Payable" id="Payable"  class = "form-control">
       <span class="demo-errors"></span>
@@ -845,7 +862,7 @@ Demand Draft * :
 
 
 <td>
-  Addresss : 
+  <div class="required"><strong>Addresss</strong></div> 
 </td>
      
 <td>
@@ -862,7 +879,7 @@ Demand Draft * :
 
 <p>
 <tr>
-  <td><strong>State</strong></td>
+  <td><div class="required"><strong>State</strong></div></td>
 <td><div class="form-group">
   
   <select class="form-control" id="state" name = "state">
@@ -916,7 +933,11 @@ Demand Draft * :
     </tr>
 <p>
 <td>
-City :  
+<div class="required">
+<strong>
+City
+</strong>
+</div>
 </td>
      
 <td>
@@ -937,14 +958,28 @@ City :
 
         <script type="text/javascript">
             $(function () {
-                $('#datetimepicker1').datepicker();
+                $('#datetimepicker1').datepicker({
+
+                  locale: {
+      format: 'YYYY-MM-DD'
+    },
+    startDate: '19-01-01',
+    endDate: Date() 
+                });
             });
         </script>
 
 
         <script type="text/javascript">
             $(function () {
-                $('#datetimepicker2').datepicker();
+                $('#datetimepicker2').datepicker({
+locale: {
+      format: 'YYYY-MM-DD'
+    },
+    startDate: '19-01-01',
+    endDate: Date()
+                  
+                });
             });
         </script>
 

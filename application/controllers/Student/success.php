@@ -14,46 +14,37 @@ class success extends CI_Controller
   
     }
 
+
+         
+            
+   
  
 
 	public function index()
 	{
        $Email_id = $this->input->post('Email_id');
-    
+    echo $Email_id ; 
       $config['protocol']    = 'smtp';
         $config['smtp_host']    = 'ssl://smtp.gmail.com';
         $config['smtp_port']    = '465';
         $config['smtp_timeout'] = '7';
-        $config['smtp_user']    = 'masterofcomputer2014@gmail.com';
-        $config['smtp_pass']    = 'mlsu2014';
+        $config['smtp_user']    = 'amitjain.lov@gmail.com';
+        $config['smtp_pass']    = 'amit1992';
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'text'; // or html
         $config['validation'] = TRUE; // bool whether to validate email or not   
         $config['mail_path'] = 'ssl://smtp.gmail.com' ;  
 
-        $this->email->initialize($config);
-
-          $this->email->from('masterofcomputer2014@gmail.com', 'University Computer Center');
-        $this->email->to($Email_id); 
-
-        $this->email->subject(' University Admission ');
-         $query = $this->db->query(" select *  from student_info " );
-          $row = $query->last_row() ; 
-
-           $reg = $row->Reg_id;
-         
-            $MESSAGE_BODY = "Your Registration id is  ".$reg."   "; 
-$MESSAGE_BODY .= "For further enquiry save to  Registration id "; 
-$MESSAGE_BODY .= "and Login with Reg_id and Date of Birth "; 
-
-        $this->email->message($MESSAGE_BODY);  
+        $this->email->message(' Your Registration id is .$reg
+          <h2> <center> For further enquiry save to  Registration id ');  
 
         $this->email->send();
 
         echo $this->email->print_debugger();
 
-      
+        
+    
        $image = $this->user_model->do_upload();
        $Sign = $this->user_model->do_upload_sign();
        
@@ -166,6 +157,14 @@ redirect('/student/successpage');
 
 else 
 {
+
+
+
+
+
+
+
+
 
 $query = $this->db->query(" select *  from student_info " );
  $row = $query->last_row() ; 

@@ -211,4 +211,6 @@ ul,li{
        {
         padding: 25px ; 
        }
-       
+       .required :after {
+         content:"*";color:red;
+        }

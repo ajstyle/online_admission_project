@@ -12,19 +12,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Admission Form</a>
+      <a class="navbar-brand" href="form">Admission Form</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         
-          <li class=""><a href="#"><span class="sr-only"></span> <span class="glyphicon glyphicon-dashboard"> </span>Home</a></li>
+          <li class=""><a href="form"><span class="sr-only"></span> <span class="glyphicon glyphicon-dashboard"> </span>Home</a></li>
           
            <li><a href="Instruction"><span class="glyphicon glyphicon-info-sign"> </span>Read Instruction</a></li>
         
 
         
-        <li>  <a href="send/contact"> </span>Contact us</a></li>
+        <li>  <a href="contact"> </span>Contact us</a></li>
       
     </div>
   </div>
@@ -49,7 +49,7 @@
                 <div class="col-md-2">
    <div class="list-group">
   
-  <a href="#" class="list-group-item "><span class="glyphicon glyphicon-edit"> </span>Fillup form </a>
+  <a href="form" class="list-group-item "><span class="glyphicon glyphicon-edit"> </span>Fillup form </a>
      
    <a href="login" class="list-group-item  ">Print form</a>
   </span> <a href="Send" class="list-group-item active" >Send Application form</a>

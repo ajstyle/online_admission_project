@@ -78,28 +78,104 @@
 </div>  
                    </div>
 
-<div class="col-md-9">
+
 <center>
 <h2> <u>Online Admission Portal 2015-16 </u></h2>
 </center>
-</br>
-</br>
-</br>
-    <div class = well>
-    <center><h3><u> Student Admission 2015-16 : </u></h3></center>
-     </div>
+
+
+<center>    
+<table width  =  "1000px">
+
+<tr>
+<td>
+    <center><h4><u> Student Admission 2015-16 : </u></h4></center>
+   
+     &nbsp; 
 	 <center>
+</td>
+<td>
+
     <a href = "<?=base_url()?>student/form"> <button type="button" class="btn btn-primary btn-lg">Click here</button></a>
       
     
             <img src="<?=base_url()?>public/images/new.gif" alt="Chania">       </div>
                    
+   
+
+        </center>     
+                   
+    </td>
+</tr>
+<tr>
+<td> 
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; 
+</td>
+<td>
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+</td>
+</tr>
+
+<tr>
+<td> 
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; 
+</td>
+<td>
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+</td>
+</tr>
+
+
+
+
+
+
+    <br>
+    <br>
+    
+
+
+
+<tr>
+<td>
+
+    <center><h4><u> Admin Panel </u></h4></center>
+   
+
+   </div>
+   </div>
+   </div>
+   </section>
+
+   <center>
+</td>
+<td>
+
+    <a href = "<?=base_url()?>admin/login"> <button type="button" class="btn btn-primary btn-lg">Click here</button></a>
+      
+    
+                </div>
+                   
+   
+
         </center>     
 
-                 
 
-                     
+</td>
+</tr>
+</center>
+</center>
 
+
+</div>
+</table>
   </body>
+
   </html>
   
